@@ -1,40 +1,55 @@
+import { TouchableOpacity } from 'react-native';
 import styled from 'styled-components/native';
 
 export const Container = styled.SafeAreaView`
   flex: 1;
 
-  justify-content: center;
-  align-items: center;
+  background-color: ${props => props.theme.background};
+`;
 
-  background-color: white;
+export const Header = styled.View`
+  padding: 15px;
+
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: space-between;
 `;
 
 export const Title = styled.Text`
-  margin: 10px;
-
-  font-size: 20px;
-  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
 `;
 
-export const Information = styled.Text`
-  margin-bottom: 5px;
-
-  color: #333;
-  text-align: center;
+export const ButtonContainer = styled.View`
+  flex-direction: row;
+  align-items: center;
 `;
 
-export const Status = styled.Text`
-  color: ${props => (props.isConnected ? 'green' : '#333')};
-  opacity: ${props => (props.isConnected ? 1 : 0.5)};
+export const CardContainer = styled.View`
+  padding: 10px 10px 0px 10px;
+  margin: 15px;
+
+  background-color: white;
+  border-radius: 16px;
 `;
 
-export const Input = styled.TextInput`
-  padding: 5px 10px;
+export const HearhCardContainer = styled(CardContainer)`
+  padding: 20px;
 
-  width: 300px;
-
-  border: 1px solid gray;
-  border-radius: 5px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 `;
 
-export const Button = styled.Button``;
+export const HearthContent = styled.View`
+  flex-direction: row;
+
+  align-items: center;
+`;
+
+export const HearthHeader = styled.View`
+  margin-left: 8px;
+
+  flex-direction: column;
+`;
