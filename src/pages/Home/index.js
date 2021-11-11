@@ -72,7 +72,11 @@ export default function App() {
       sync: {},
     });
 
-    const client = new Paho.MQTT.Client(host, port, 'randomClient');
+    const client = new Paho.MQTT.Client(
+      host,
+      port,
+      `randomClient#${Math.random() * 100}`,
+    );
     client.onMessageArrived = entry => {
       const data = entry.payloadString;
 
@@ -111,6 +115,7 @@ export default function App() {
         data={data}
         width={Dimensions.get('screen').width - 50}
         height={230}
+        withDots={false}
         chartConfig={{
           backgroundGradientFrom: 'white',
           backgroundGradientTo: 'white',
