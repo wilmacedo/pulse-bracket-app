@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import {
-  AsyncStorage,
-  Dimensions,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import { AsyncStorage, Dimensions, Text, TouchableOpacity } from 'react-native';
 
 import init from 'react_native_mqtt';
 
